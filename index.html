@@ -1,146 +1,699 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AURA | Yoga somático en Barcelona y Las Palmas</title>
-<meta name="description" content="Prácticas breves de yoga somático para volver a ti, y encuentros pequeños y cuidados. AURA se mueve entre Barcelona y Las Palmas de Gran Canaria.">
-<link rel="canonical" href="https://aurareset.es/">
-<meta name="theme-color" content="#F1EADC">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="AURA">
-<meta property="og:title" content="AURA | Yoga somático en Barcelona y Las Palmas">
-<meta property="og:description" content="Prácticas breves de yoga somático para volver a ti, y encuentros pequeños y cuidados. AURA se mueve entre Barcelona y Las Palmas de Gran Canaria.">
-<meta property="og:url" content="https://aurareset.es/">
-<meta property="og:locale" content="es_ES">
-<meta property="og:image" content="https://aurareset.es/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23231B14'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23C4A15A' stroke-width='2'/%3E%3C/svg%3E">
-<link rel="preload" href="/assets/fonts/CormorantGaramond-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/Jost-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/aura.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AURA", "alternateName": "AURA yoga somático", "url": "https://aurareset.es/", "logo": "https://aurareset.es/og.png", "description": "Prácticas breves de yoga somático para volver a ti, y encuentros pequeños y cuidados. AURA se mueve entre Barcelona y Las Palmas de Gran Canaria.", "sameAs": ["https://www.instagram.com/aurayogareset"], "areaServed": [{"@type": "City", "name": "Barcelona"}, {"@type": "City", "name": "Las Palmas de Gran Canaria"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es el yoga somático?", "acceptedAnswer": {"@type": "Answer", "text": "Una forma de practicar yoga que presta atención a cómo se siente el cuerpo por dentro. Se hace con movimientos lentos y respiración suave, y no busca la postura perfecta."}}, {"@type": "Question", "name": "¿Necesito experiencia previa?", "acceptedAnswer": {"@type": "Answer", "text": "No. Las prácticas son breves y están pensadas para encajar en un día normal."}}, {"@type": "Question", "name": "¿Cuánto duran las prácticas?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 5 y 10 minutos. Morning dura 5 o 10, After Work 5, Too Much 7 y Night 5 o 10."}}, {"@type": "Question", "name": "¿Dónde se practica?", "acceptedAnswer": {"@type": "Answer", "text": "AURA se mueve entre Barcelona y Las Palmas de Gran Canaria. El primer encuentro será en Barcelona, con plazas muy limitadas."}}, {"@type": "Question", "name": "¿Sustituye a la terapia o a la atención médica?", "acceptedAnswer": {"@type": "Answer", "text": "No. AURA es yoga somático y no sustituye la atención médica ni psicológica."}}, {"@type": "Question", "name": "¿Cómo me entero del primer encuentro?", "acceptedAnswer": {"@type": "Answer", "text": "Deja tu email en esta página o escríbenos “encuentro” por Instagram, y te avisamos primero."}}]}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>AURA — Somatic Reset Studio | Yoga & Regulación del Sistema Nervioso</title>
+  <meta name="description" content="Un refugio nacido entre la roca volcánica, el Atlántico y el Mediterráneo. Prácticas de yoga somático y pranayama para regular tu sistema nervioso.">
+  
+  <!-- Tipografías Editoriales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-linen: #FAF8F5;            /* Lino / Arena Blanca */
+      --surface: #FFFFFF;
+      --surface-dark: #161513;        /* Basalto Volcánico */
+      --text-dark: #161513;
+      --text-light: #FAF8F5;
+      --text-muted: #6E6962;
+      --lava-terracotta: #C04A32;    /* Rojo Lava / Magma */
+      --lava-hover: #A03B26;
+      --palm-green: #586656;          /* Verde Botánico Muteado */
+      --border: rgba(22, 21, 19, 0.08);
+      
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-linen);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 90px;
+      transition: background-color 0.4s ease;
+    }
+
+    /* Mode Pratyahara (Modo Cierre Sensorial / Oscuro) */
+    body.pratyahara-mode {
+      background-color: #0E0D0C !important;
+      color: #E6E0D5 !important;
+    }
+
+    body.pratyahara-mode .sanctuary-card,
+    body.pratyahara-mode .pillar-card,
+    body.pratyahara-mode .lead-card {
+      background: #161513 !important;
+      color: #E6E0D5 !important;
+      border-color: rgba(255,255,255,0.1) !important;
+    }
+
+    /* Header Nav */
+    header {
+      padding: 1.8rem 2rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(16px);
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-decoration: none;
+      color: currentColor;
+    }
+
+    .tag-badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--palm-green);
+      border: 1px solid rgba(88, 102, 86, 0.3);
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .btn-pratyahara {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: currentColor;
+      padding: 0.6rem 1.1rem;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      cursor: pointer;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    .btn-pratyahara:hover {
+      border-color: var(--lava-terracotta);
+      color: var(--lava-terracotta);
+    }
+
+    .btn-cta {
+      background: var(--text-dark);
+      color: var(--bg-linen);
+      border: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-cta:hover {
+      background: var(--lava-terracotta);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5.5rem 0 3.5rem;
+      text-align: center;
+    }
+
+    .hero-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lava-terracotta);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6.5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--lava-terracotta);
+      font-weight: 300;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* PRANAYAMA & RESET SANCTUARY WIDGET */
+    .sanctuary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 3.5rem 2rem;
+      max-width: 720px;
+      margin: 0 auto 5.5rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(22, 21, 19, 0.02);
+    }
+
+    .sanctuary-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sanctuary-title {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .mode-pills {
+      display: flex;
+      background: var(--bg-linen);
+      padding: 0.25rem;
+      border-radius: 100px;
+      gap: 0.2rem;
+    }
+
+    .pill-btn {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.9rem;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pill-btn.active {
+      background: var(--surface);
+      color: var(--text-dark);
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Anillo de Pranayama / Respiración Somática */
+    .pranayama-orb {
+      width: 210px;
+      height: 210px;
+      margin: 2rem auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orb-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1.5px solid var(--lava-terracotta);
+      opacity: 0.25;
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .orb-ring.active {
+      animation: pranayamaBreathe 8s infinite ease-in-out;
+    }
+
+    @keyframes pranayamaBreathe {
+      0%, 100% { transform: scale(0.82); opacity: 0.2; border-color: var(--lava-terracotta); }
+      50% { transform: scale(1.22); opacity: 0.85; border-color: var(--palm-green); }
+    }
+
+    .timer-readout {
+      font-family: var(--font-serif);
+      font-size: 3.8rem;
+      font-weight: 300;
+      line-height: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .timer-phase {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--lava-terracotta);
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    .btn-start-reset {
+      background: var(--lava-terracotta);
+      color: #FFFFFF;
+      border: none;
+      padding: 1.1rem 2.8rem;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 25px rgba(192, 74, 50, 0.2);
+    }
+
+    .btn-start-reset:hover {
+      background: var(--lava-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Lead Capture Box (Conectado a Web3Forms) */
+    .lead-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 4rem 2.5rem;
+      max-width: 800px;
+      margin: 0 auto 6rem;
+      text-align: center;
+    }
+
+    .lead-card h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 0.8rem;
+    }
+
+    .lead-card p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 540px;
+      margin: 0 auto 2.2rem;
+      font-weight: 300;
+    }
+
+    .lead-form {
+      display: flex;
+      gap: 0.8rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .input-clean {
+      flex: 1;
+      padding: 1rem 1.4rem;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--bg-linen);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: currentColor;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .input-clean:focus {
+      border-color: var(--lava-terracotta);
+    }
+
+    .btn-submit {
+      background: var(--text-dark);
+      color: var(--bg-linen);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.25s ease;
+    }
+
+    .btn-submit:hover {
+      background: var(--lava-terracotta);
+    }
+
+    /* LOS 3 PILARES DEL YOGA SOMÁTICO */
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.8rem 2rem;
+    }
+
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--lava-terracotta);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .pillar-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      font-weight: 300;
+      margin-bottom: 0.8rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    /* B2B CORPORATE */
+    .b2b-banner {
+      background: var(--surface-dark);
+      color: var(--text-light);
+      border-radius: 32px;
+      padding: 4rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 5rem;
+    }
+
+    .b2b-banner h2 {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 0.6rem;
+    }
+
+    .b2b-banner p {
+      color: #A09A92;
+      font-size: 1.05rem;
+      max-width: 520px;
+      font-weight: 300;
+    }
+
+    .btn-b2b {
+      background: var(--lava-terracotta);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 1.1rem 2.2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-b2b:hover {
+      background: var(--lava-hover);
+    }
+
+    /* Mobile Floating Bar */
+    .mobile-float-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 0.9rem 1.2rem;
+      z-index: 200;
+    }
+
+    .btn-mobile-reset {
+      width: 100%;
+      background: var(--lava-terracotta);
+      color: #FFFFFF;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      padding: 4rem 0 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-float-bar { display: block; }
+      .lead-form { flex-direction: column; }
+      .b2b-banner { padding: 2.5rem 1.8rem; text-align: center; justify-content: center; }
+      .b2b-banner p { margin: 0 auto; }
+      .tag-badge { display: none; }
+    }
+  </style>
 </head>
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="top" data-tone="light"><div class="in">
-<a class="brand" href="/" aria-label="AURA, inicio">AURA</a>
-<nav aria-label="Principal"><a href="/#un-dia">Un día contigo</a><a href="/#encuentros">Encuentros</a><a href="/barcelona/">Barcelona</a><a href="/las-palmas/">Las Palmas</a></nav>
-<button class="mode" id="modeBtn" type="button" aria-pressed="false">Modo noche</button>
-</div></header>
-<div class="ritual" id="ritual" role="dialog" aria-modal="true" aria-label="Pausa guiada de 3 minutos">
-<div class="r-top"><button type="button" id="rMute" hidden aria-pressed="false">Silenciar</button><button type="button" id="rExit">Salir</button></div>
-<div class="r-stage"><div class="orb" aria-hidden="true"></div><p class="r-text" id="rText" aria-live="polite"></p></div>
-<div class="r-end">
-<h2>¿Te avisamos del primer encuentro?</h2>
-<p>Reuniones pequeñas y cuidadas al detalle. El primero será en Barcelona, con plazas muy limitadas.</p>
-<form class="form aura-form">
-<label class="t" for="em-pausa">Tu email</label>
-<div class="row"><input id="em-pausa" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="nombre@correo.com"><button class="btn" type="submit">Avísame</button></div>
-<input type="hidden" name="ciudad" value=""><input type="hidden" name="origen" value="pausa">
-<div class="hp" aria-hidden="true"><label>No rellenes esto <input name="empresa" tabindex="-1" autocomplete="off"></label></div>
-<label class="consent"><input type="checkbox" name="consentimiento" value="si" required><span>Acepto que AURA use mi email para avisarme de encuentros y novedades. Puedo darme de baja cuando quiera.</span></label>
-<p class="status" role="status" aria-live="polite"></p>
-</form>
-<button class="btn ghost r-back" id="rBack" type="button">Volver a la web</button>
-</div>
-</div>
-<main id="contenido">
 
-<section class="scene s-hero hero" data-tone="light"><div class="wrap">
-<div class="mark"><h1>AURA</h1></div>
-<p class="tagline">Vuelve a ti.</p>
-<p class="sub">Yoga somático, sin prisa. Prácticas breves para bajar el ritmo y encuentros pequeños y cuidados, entre Barcelona y Las Palmas.</p>
-<button class="btn" type="button" data-open-ritual>Respira 3 minutos con AURA</button>
-<span class="hint">Un toque. Dura 3 minutos y sigue sola.</span>
-<a class="more" href="#un-dia">Ver un día con AURA</a>
-</div></section>
+  <!-- Header Nav -->
+  <header>
+    <div class="nav-inner">
+      <div class="brand-group">
+        <a href="#" class="brand-title">AURA</a>
+        <span class="tag-badge">YOGA SOMÁTICO</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-pratyahara" onclick="togglePratyahara()" id="pratyaharaBtn">Pratyahara</button>
+        <button class="btn-cta" onclick="scrollToLead()">Obtener Guía</button>
+      </div>
+    </div>
+  </header>
 
-<section class="scene s-morning" id="un-dia" data-tone="light"><div class="wrap">
-<h2 class="sec">Un día contigo</h2>
-<div class="cols">
-<div><p class="when">por la mañana</p><h3 class="name">Morning</h3>
-<p class="desc">Despiertas el cuerpo con suavidad, eliges una intención y te dices algo amable antes de salir.</p>
-<span class="time">5 o 10 minutos</span></div>
-<div class="halo m" aria-hidden="true"><i></i></div>
-</div></div></section>
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <span class="hero-kicker">[ ANCLAJE VOLCÁNICO · PRANAYAMA · ATLANTE ]</span>
+      <h1>Tu cuerpo ya sabe cómo sanar.<br><em>Permiso para parar.</em></h1>
+      <p>Uniendo la sabiduría milenaria del Yoga, la biomecánica somática y la fuerza natural de Gran Canaria y Barcelona. Pausas conscientes de 3 minutos para regular tu sistema nervioso.</p>
+    </section>
 
-<section class="scene s-after" data-tone="light"><div class="wrap">
-<div class="cols flip">
-<div><p class="when">al salir del trabajo</p><h3 class="name">After Work</h3>
-<p class="desc">Cierras la jornada y la dejas fuera. Recuperas las manos, la respiración y tu espacio.</p>
-<span class="time">5 minutos</span></div>
-<div class="halo a" aria-hidden="true"><i></i></div>
-</div></div></section>
+    <!-- PRANAYAMA SANCTUARY WIDGET -->
+    <section class="sanctuary-card" id="sanctuary">
+      <div class="sanctuary-header">
+        <span class="sanctuary-title">[ 01 / REGULACIÓN DEL PRANA ]</span>
+        <div class="mode-pills">
+          <button class="pill-btn active" onclick="setTimerMode(180, this)">3 min</button>
+          <button class="pill-btn" onclick="setTimerMode(60, this)">1 min</button>
+          <button class="pill-btn" onclick="setTimerMode(300, this)">5 min</button>
+        </div>
+      </div>
 
-<section class="scene s-much" data-tone="dark"><div class="wrap">
-<div class="cols">
-<div><p class="when">cuando todo pesa</p><h3 class="name">Too Much</h3>
-<p class="desc">Bajas el ritmo hasta que la cabeza se queda en silencio y el cuerpo vuelve a ser tuyo.</p>
-<span class="time">7 minutos</span></div>
-<div class="halo t" aria-hidden="true"><i></i></div>
-</div></div></section>
+      <div class="pranayama-orb">
+        <div class="orb-ring" id="orbRing"></div>
+        <div class="timer-readout">
+          <div id="timeClock">03:00</div>
+          <span class="timer-phase" id="phaseStatus">Listo</span>
+        </div>
+      </div>
 
-<section class="scene s-night" data-tone="dark"><div class="wrap">
-<div class="cols flip">
-<div><p class="when">antes de dormir</p><h3 class="name">Night</h3>
-<p class="desc">Sueltas lo que quedó del día para que el cuerpo pueda descansar de verdad.</p>
-<span class="time">5 o 10 minutos</span>
-<blockquote class="verse" style="margin-left:0">“Inhalo, calmo cuerpo y mente. Exhalo, sonrío.”<cite>Thich Nhat Hanh</cite></blockquote></div>
-<div class="halo n" aria-hidden="true"><i></i></div>
-</div></div></section>
+      <button class="btn-start-reset" id="startBtn" onclick="togglePranayamaSession()">Iniciar Pausa Somática</button>
+    </section>
 
-<section class="scene s-night closing" style="--prev:#231B14" data-tone="dark"><div class="wrap">
-<h2>Empieza por tres minutos</h2>
-<p>No hace falta nada más. Un toque y la práctica sigue sola.</p>
-<button class="btn" type="button" data-open-ritual>Respira 3 minutos con AURA</button>
-</div></section>
+    <!-- EMAIL MARKETING LEAD CAPTURE (CONECTADO A WEB3FORMS) -->
+    <section class="lead-card" id="leadSection">
+      <h2>Inicia tu Ritual de Anclaje</h2>
+      <p>Recibe en tu correo la guía en audio y PDF con 3 micro-pausas somáticas para liberar tensión en cuello, mandíbula y mirada en 3 minutos.</p>
 
-<section class="scene s-deep" id="rituales" data-tone="dark"><div class="wrap">
-<p class="when">con las estaciones</p><h2>Rituales</h2>
-<p class="lead">Pequeños rituales para marcar el paso del año: un reset pensado para cada equinoccio y cada solsticio.</p>
-<ul class="cards">
-<li><h3>Equinoccio de otoño</h3><p><a href="https://www.instagram.com/aurayogareset" rel="noopener">Ya en Instagram</a></p></li>
-<li><h3>Solsticio de invierno</h3><p>Diciembre, próximamente</p></li>
-</ul>
-</div></section>
+      <form action="https://api.web3forms.com/submit" method="POST" class="lead-form">
+        <input type="hidden" name="apikey" value="53a4d609-d5fa-4629-9a94-ae8bc1ad8dcb">
+        
+        <input type="text" name="name" placeholder="Tu nombre" class="input-clean" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" class="input-clean" required>
+        <button type="submit" class="btn-submit">Recibir Guía</button>
+      </form>
+    </section>
 
-<section class="scene s-night" id="encuentros" style="--prev:#1A140E" data-tone="dark"><div class="wrap narrow">
-<p class="when">próximamente</p><h2>Encuentros</h2>
-<p class="lead">Reuniones pequeñas y cuidadas al detalle: una práctica, un espacio bonito y tiempo para quedarse un rato más. El primero será en Barcelona, con plazas muy limitadas.</p>
-<form class="form aura-form">
-<label class="t" for="em-home">Tu email, y te avisamos primero</label>
-<div class="row"><input id="em-home" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="nombre@correo.com"><button class="btn" type="submit">Avísame del primero</button></div>
-<input type="hidden" name="ciudad" value=""><input type="hidden" name="origen" value="home">
-<div class="hp" aria-hidden="true"><label>No rellenes esto <input name="empresa" tabindex="-1" autocomplete="off"></label></div>
-<label class="consent"><input type="checkbox" name="consentimiento" value="si" required><span>Acepto que AURA use mi email para avisarme de encuentros y novedades. Puedo darme de baja cuando quiera.</span></label>
-<p class="status" role="status" aria-live="polite"></p>
-</form>
-<p class="alt">¿Prefieres Instagram? Escríbenos <a href="https://ig.me/m/aurayogareset" rel="noopener">“encuentro”</a> y te avisamos igual.</p>
-</div></section>
+    <!-- FILOSOFÍA DEL YOGA SOMÁTICO -->
+    <section class="philosophy-grid">
+      <div class="pillar-card">
+        <span class="pillar-num">[ 01 / PRATYAHARA ]</span>
+        <h3>Cierre Sensorial</h3>
+        <p>Cesa el ruido exterior de las pantallas. Replega la atención hacia la sensación física del cuerpo y restaura tu foco en segundos.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-num">[ 02 / PRANAYAMA ]</span>
+        <h3>Ritmo Respiratorio</h3>
+        <p>Regula la frecuencia cardíaca y estimula el nervio vago mediante respiración diafragmática consciente desde el escritorio.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-num">[ 03 / STHIRA SUKHAM ]</span>
+        <h3>Estabilidad y Facilidad</h3>
+        <p>Encuentra el equilibrio entre la firmeza volcánica (*Sthira*) y la ligereza del mar (*Sukha*) para liberar la tensión muscular.</p>
+      </div>
+    </section>
 
-<section class="scene s-deep" id="preguntas" data-tone="dark"><div class="wrap narrow">
-<h2>Preguntas</h2>
-<div class="faq"><details><summary>¿Qué es el yoga somático?</summary><p>Una forma de practicar yoga que presta atención a cómo se siente el cuerpo por dentro. Se hace con movimientos lentos y respiración suave, y no busca la postura perfecta.</p></details><details><summary>¿Necesito experiencia previa?</summary><p>No. Las prácticas son breves y están pensadas para encajar en un día normal.</p></details><details><summary>¿Cuánto duran las prácticas?</summary><p>Entre 5 y 10 minutos. Morning dura 5 o 10, After Work 5, Too Much 7 y Night 5 o 10.</p></details><details><summary>¿Dónde se practica?</summary><p>AURA se mueve entre Barcelona y Las Palmas de Gran Canaria. El primer encuentro será en Barcelona, con plazas muy limitadas.</p></details><details><summary>¿Sustituye a la terapia o a la atención médica?</summary><p>No. AURA es yoga somático y no sustituye la atención médica ni psicológica.</p></details><details><summary>¿Cómo me entero del primer encuentro?</summary><p>Deja tu email en esta página o escríbenos “encuentro” por Instagram, y te avisamos primero.</p></details></div>
-</div></section>
+    <!-- B2B CORPORATE -->
+    <section class="b2b-banner">
+      <div>
+        <h2>AURA Corporate</h2>
+        <p>Salud somática y gestión de la energía personal para equipos de alto rendimiento. Talleres y pausas corporativas integradas en la jornada.</p>
+      </div>
+      <a href="mailto:hola@aurareset.es?subject=Consulta%20AURA%20Corporate" class="btn-b2b">Solicitar Propuesta B2B</a>
+    </section>
+  </main>
 
-<section class="scene s-night about" id="sobre" style="--prev:#1A140E" data-tone="dark"><div class="wrap narrow">
-<p class="when">quién hay detrás</p><h2>Sobre AURA</h2>
-<p class="lead">AURA nació en Las Palmas de Gran Canaria y hoy se mueve entre Barcelona y Las Palmas, entre el Atlántico y el Mediterráneo.</p>
-<p>Practico yoga y me encantan los retiros de yoga y surf. De ahí sale lo que hago: prácticas breves que caben en un día normal, para volver a ti.</p>
-<div class="cities"><a class="btn ghost" href="/barcelona/">AURA en Barcelona</a><a class="btn ghost" href="/las-palmas/">AURA en Las Palmas</a><a class="btn ghost" href="https://www.instagram.com/aurayogareset" rel="noopener">Hablemos en @aurayogareset</a></div>
-</div></section>
+  <!-- Mobile Floating Action Bar -->
+  <div class="mobile-float-bar">
+    <button class="btn-mobile-reset" onclick="scrollToSanctuary()">Pausa Somática (3 min)</button>
+  </div>
 
-</main>
-<footer class="foot"><div class="wrap">
-<ul class="links"><li><a href="/">Inicio</a></li><li><a href="/barcelona/">Barcelona</a></li><li><a href="/las-palmas/">Las Palmas</a></li><li><a href="https://www.instagram.com/aurayogareset" rel="noopener">Instagram</a></li><li><a href="https://ig.me/m/aurayogareset" rel="noopener">¿Para tu equipo? Escríbenos</a></li></ul>
-<p>AURA, yoga somático. No sustituye la atención médica ni psicológica.</p>
-<details><summary>Privacidad</summary>
-<p>Responsable: [tu nombre o razón social]. Finalidad: avisarte del primer encuentro y de las novedades de AURA. Base legal: tu consentimiento. Destinatarios: [la herramienta de email que uses]. Derechos: acceso, rectificación, supresión y otros, escribiendo a [tu email de contacto]. Esta web no usa cookies de seguimiento.</p></details>
-</div></footer>
-<script src="/assets/config.js"></script>
-<script src="/assets/aura.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 AURA Reset Studio. Todos los derechos reservados.</p>
+      <p style="margin-top: 0.5rem;">
+        <a href="https://aurareset.es">aurareset.es</a> · Gran Canaria & Barcelona
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Timer & Pranayama Logic
+    let secondsLeft = 180;
+    let isRunning = false;
+    let timerLoop = null;
+
+    function setTimerMode(sec, btn) {
+      if (isRunning) togglePranayamaSession();
+      secondsLeft = sec;
+      renderClock();
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function renderClock() {
+      let m = Math.floor(secondsLeft / 60);
+      let s = secondsLeft % 60;
+      document.getElementById('timeClock').innerText = 
+        `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function togglePranayamaSession() {
+      const ring = document.getElementById('orbRing');
+      const btn = document.getElementById('startBtn');
+      const status = document.getElementById('phaseStatus');
+
+      if (!isRunning) {
+        isRunning = true;
+        btn.innerText = 'Pausar Pausa';
+        status.innerText = 'Inhala... Exhala...';
+        ring.classList.add('active');
+
+        timerLoop = setInterval(() => {
+          secondsLeft--;
+          renderClock();
+
+          if (secondsLeft <= 0) {
+            clearInterval(timerLoop);
+            isRunning = false;
+            ring.classList.remove('active');
+            btn.innerText = 'Completado ✨';
+            status.innerText = 'Completado';
+          }
+        }, 1000);
+      } else {
+        clearInterval(timerLoop);
+        isRunning = false;
+        ring.classList.remove('active');
+        btn.innerText = 'Reanudar Pausa';
+        status.innerText = 'Pausado';
+      }
+    }
+
+    // Toggle Pratyahara (Modo Cierre Sensorial / Oscuro)
+    function togglePratyahara() {
+      document.body.classList.toggle('pratyahara-mode');
+      const btn = document.getElementById('pratyaharaBtn');
+      if (document.body.classList.contains('pratyahara-mode')) {
+        btn.innerText = 'Modo Luz';
+      } else {
+        btn.innerText = 'Pratyahara';
+      }
+    }
+
+    function scrollToLead() {
+      document.getElementById('leadSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToSanctuary() {
+      document.getElementById('sanctuary').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
